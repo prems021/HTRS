@@ -1,0 +1,58 @@
+{
+  "name": "HTRS",
+  "version": "1.0.0",
+  "description": "A boilerplate for Node.js, Express, Mongoose, Heroku, mLab, Nodemon, PM2, and Babel.",
+  "scripts": {
+    "start": "nodemon src/server.js --exec babel-node",
+    "dev": "nodemon src/server.js --exec babel-node",
+    "test": "mocha --compilers js:babel-register",
+    "prod": "babel src -d dist && node dist/index.js",
+    "lint": "eslint src && eslint test",
+    "clean": "rimraf dist",
+    "reset": "git reset --hard HEAD && git clean -df",
+    "reinstall": "yarn cache clean && git clean -dfx -e '.*' && yarn install",
+    "deploy": "git push heroku master"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prems021/HTRS.git"
+  },
+  "keywords": [
+    "Node.js"
+  ],
+  "author": "Yen-cheng Chen, 陳彥澄",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/prems021/HTRS/issues"
+  },
+  "homepage": "https://github.com/prems021/HTRS#readme",
+  "dependencies": {
+    "babel-cli": "6.23.0",
+    "babel-plugin-transform-function-bind": "6.22.0",
+    "babel-preset-latest": "6.22.0",
+    "body-parser": "1.17.0",
+    "compression": "1.6.2",
+    "express": "4.15.0",
+    "express-graphql": "0.6.3",
+    "express-jwt": "5.1.0",
+    "graphql": "0.9.1",
+    "jsonwebtoken": "7.3.0",
+    "lodash": "4.17.4",
+    "mongoose": "4.8.6",
+    "morgan": "1.8.1",
+    "pm2": "2.4.2",
+    "prerender-node": "2.7.0",
+    "rxjs": "5.2.0",
+    "socket.io": "1.7.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "7.1.1",
+    "babel-register": "6.23.0",
+    "chai": "3.5.0",
+    "eslint": "3.17.0",
+    "mocha": "3.2.0",
+    "nodemon": "1.11.0",
+    "rimraf": "2.6.1",
+    "sinon": "1.17.7"
+  }
+}
